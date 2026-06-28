@@ -33,7 +33,8 @@ for page in ['https://support.apple.com/en-us/100100']:
                     if "macOS" in columns[1].text:
                         if release in columns[0].text:
                             for links in columns[0].findAll('a'):
-                                stem = "https://support.apple.com" + links.get('href')
+                                #stem = "https://support.apple.com" + links.get('href')
+                                stem = links.get('href')
 
                             try:
                                 stem
